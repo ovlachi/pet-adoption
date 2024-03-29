@@ -1,0 +1,294 @@
+:root {
+  --primary-blue: #001d37;
+  --secondary-blue: #475aff;
+  --secondary-blue-hover: #2135ee;
+  --primary-purple: #d660ff;
+  --tertiary-blue: #6079ff;
+  --margin-horiz: 1rem;
+  --pet-filter: #9f9f9f;
+  --footer-text: #a6a6a6;
+  --pet-card-text-body: #626262;
+  --pet-card-text-age: #a2a2a2;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+body {
+  font-family: "Source Sans 3", sans-serif;
+}
+
+.top-section {
+  color: white;
+  padding: 80px 0;
+  max-width: 1066px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.top-section--wrapper {
+  background-color: var(--primary-blue);
+  padding-left: 16px;
+  padding-right: 16px;
+  overflow: hidden;
+}
+
+.top-actual-content {
+  z-index: 5;
+  position: relative;
+}
+
+.top-section h1 {
+  font-size: 4rem;
+  margin: 0;
+  line-height: 98%;
+  max-width: 525px;
+}
+
+.cta-text {
+  font-size: 1.25rem;
+  line-height: 170%;
+  margin: 1rem 0;
+  max-width: 425px;
+}
+
+.cta-btn {
+  margin-top: 35px;
+  margin-bottom: 70px;
+}
+
+.btn--primary {
+  display: inline-block;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-size: 1.125rem;
+  font-style: normal;
+  background-color: #475aff;
+  border: 2px solid #475aff;
+  color: white;
+  text-decoration: none;
+  padding: 14px 32px;
+  border-radius: 1000px;
+  transition: all 0.3s ease-out;
+}
+
+.btn--primary:hover {
+  background-color: #2135ee;
+  border: 2px solid #2135ee;
+}
+
+.btn--primary__outline {
+  background-color: transparent;
+  border: 2px solid white;
+}
+
+.btn--primary__outline:hover {
+  background-color: white;
+  color: #2135ee;
+  border: 2px solid white;
+}
+
+.utility-mr {
+  margin-right: var(--margin-horiz);
+}
+
+.cta-feature {
+  padding: 33px 25px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.cta-feature h2 {
+  font-size: 1.5rem;
+  margin: 32px 0 3px 0;
+}
+
+.cta-feature p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.cta-features {
+  display: grid;
+  column-gap: 16px;
+  row-gap: 16px;
+}
+
+/*Responsive Feature section*/
+@media screen and (min-width: 580px) {
+  .cta-features {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .cta-features {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.circle {
+  width: 617px;
+  height: 617px;
+  background: #d660ff;
+  opacity: 0.85;
+  border-radius: 50%;
+  filter: blur(150px);
+  position: absolute;
+  top: 62px;
+  right: -390px;
+}
+
+.circle-two {
+  width: 617px;
+  height: 617px;
+  background: #6079ff;
+  opacity: 0.85;
+  border-radius: 50%;
+  filter: blur(150px);
+  position: absolute;
+  top: -365px;
+  left: -123px;
+}
+
+.page-section {
+  background-color: white;
+  padding: 65px 16px;
+}
+
+.page-section-inner {
+  max-width: 1066px;
+  margin: 0 auto;
+}
+
+.page-section-title {
+  font-size: 4rem;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.pet-filter {
+  color: var(--pet-filter);
+  font-size: 1.17rem;
+}
+
+.pet-filter button {
+  background-color: transparent;
+  border: none;
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 1.17rem;
+  color: var(--pet-filter);
+}
+
+.site-footer p {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--footer-text);
+  margin: 0 auto;
+  padding: 0 0 65px 0;
+}
+
+/*Pet Card*/
+.list-of-pets {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  column-gap: 34px;
+  row-gap: 20px;
+}
+
+.pet-card {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 165px 1fr;
+  border: 1px solid #f3f3f3;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+}
+
+.pet-card--photo {
+  order: 1;
+  grid-row: 1;
+  overflow: hidden;
+}
+
+.pet-card--photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.pet-card--photo img:hover {
+  transform: scale(1.2);
+}
+
+.pet-card--text {
+  padding: 18px 16px;
+}
+
+.pet-card--text__title {
+  margin: 0 0 5px 0;
+  font-size: 1.625rem;
+  font-weight: 600;
+}
+
+.pet-card--text__body {
+  font-size: 0.9rem;
+  margin: 0 0 16px 0;
+  line-height: 150%;
+  color: var(--pet-card-text-body);
+}
+
+.pet-card--text__age {
+  color: var(--pet-card-text-age);
+  font-size: 0.865rem;
+  margin: 0;
+}
+
+/*Responsive top-section*/
+@media screen and (min-width: 600px) {
+  .top-section h1 {
+    font-size: 6.25rem;
+  }
+
+  .top-section {
+    padding: 139px 0;
+  }
+
+  .cta-btn {
+    margin-bottom: 129px;
+  }
+
+  .page-section {
+    padding: 130px 16px;
+  }
+
+  .page-section-title {
+    font-size: 5.31rem;
+  }
+
+  .pet-filter {
+    color: var(--pet-filter);
+    font-size: 1.375rem;
+  }
+
+  .pet-filter button {
+    font-size: 1.375rem;
+  }
+
+  .list-of-pets {
+    row-gap: 28px;
+  }
+
+  .pet-card--text {
+    padding: 21px 29px;
+  }
+
+  .pet-card--text__body {
+    font-size: 1rem;
+  }
+}
