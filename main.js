@@ -30,6 +30,9 @@ async function petsArea() {
     //fetch all pets birthYear from JSON and inject into the cloned template
     clone.querySelector(".pet-card--text__age").textContent = createAgeText(pet.birthYear);
 
+    //setup fallback for missing or undefined images
+    if (!pet.photo) pet.photo = "img/fallback2x.jpg";
+
     //fecth all pets photo and ALT text from JSON and inject to the template
     clone.querySelector(".pet-card--photo img").src = pet.photo;
     clone.querySelector(".pet-card--photo img").alt = `A ${pet.species} named ${pet.name}`;
