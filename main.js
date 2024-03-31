@@ -21,8 +21,18 @@ async function petsArea() {
     //clone the cart template
     const clone = template.content.cloneNode(true);
 
-    //fetch all pet names and inject to the cloned template
+    //fetch all pet names from JSON and inject to the cloned template
     clone.querySelector("h3").textContent = pet.name;
+
+    //fetch all pets description from JSON and inject to the cloned template
+    clone.querySelector(".pet-card--text__body").textContent = pet.description;
+
+    //fetch all pets birthYear from JSON and inject into the cloned template
+    clone.querySelector(".pet-card--text__age").textContent = createAgeText(pet.birthYear);
+
+    //fecth all pets photo and ALT text from JSON and inject to the template
+    clone.querySelector(".pet-card--photo img").src = pet.photo;
+    clone.querySelector(".pet-card--photo img").alt = `A ${pet.species} named ${pet.name}`;
 
     //add all cloned items to the wrapper
     wrapper.appendChild(clone);
@@ -33,3 +43,13 @@ async function petsArea() {
 }
 
 petsArea();
+
+function createAgeText(birthYear) {
+  const currentYear = new Date().getFullYear();
+  const age = currentYear - birthYear;
+
+  if (age == 1) return "1 year old";
+  if (age == 0) return "Less than a year old";
+
+  return `${age} years old`;
+}
