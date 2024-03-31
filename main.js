@@ -21,6 +21,9 @@ async function petsArea() {
     //clone the cart template
     const clone = template.content.cloneNode(true);
 
+    //filter species with daaset attribute
+    clone.querySelector(".pet-card").dataset.species = pet.species;
+
     //fetch all pet names from JSON and inject to the cloned template
     clone.querySelector("h3").textContent = pet.name;
 
@@ -68,7 +71,16 @@ function handleButtonClick(e) {
   //remove the active class from all buttons
   allButtons.forEach((el) => el.classList.remove("active"));
 
-  //add the active class to clicked button
+  //add the active class to the clicked button
   e.target.classList.add("active");
+
   //filter the pets
+  const currentFilter = e.target.dataset.filter;
+  document.querySelectorAll(".pet-card").forEach((el) => {
+    if (currentFilter == el.dataset.species || currentFilter == "all") {
+      el.style.display = "grid";
+    } else {
+      el.style.display = "none";
+    }
+  });
 }
