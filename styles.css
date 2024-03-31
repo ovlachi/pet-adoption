@@ -6,6 +6,7 @@
   --tertiary-blue: #6079ff;
   --margin-horiz: 1rem;
   --pet-filter: #9f9f9f;
+  --pet-filter-button-hover: #7d7d7d;
   --footer-text: #a6a6a6;
   --pet-card-text-body: #626262;
   --pet-card-text-age: #a2a2a2;
@@ -185,6 +186,17 @@ body {
   font-family: "Source Sans 3", sans-serif;
   font-size: 1.17rem;
   color: var(--pet-filter);
+  cursor: pointer;
+}
+
+.pet-filter .active,
+.pet-filter .active:hover {
+  color: var(--secondary-blue);
+  text-decoration: underline;
+}
+
+.pet-filter button:hover {
+  color: var(--pet-filter-button-hover);
 }
 
 .site-footer p {
