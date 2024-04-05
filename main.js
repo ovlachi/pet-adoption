@@ -14,7 +14,7 @@ start();
 
 //Dynamic pets fetch from external JSON file
 async function petsArea() {
-  const petsPromise = await fetch("https://learnwebcode.github.io/bootcamp-pet-data/pets.json");
+  const petsPromise = await fetch("https://bejewelled-dasik-45f9da.netlify.app/.netlify/functions/pets");
   const petsData = await petsPromise.json();
 
   petsData.forEach((pet) => {
