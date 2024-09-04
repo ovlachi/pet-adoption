@@ -14,14 +14,14 @@ start();
 
 //Dynamic pets fetch from external JSON file
 async function petsArea() {
-  const petsPromise = await fetch("https://learnwebcode.github.io/bootcamp-pet-data/pets.json");
+  const petsPromise = await fetch("https://bejewelled-dasik-45f9da.netlify.app/.netlify/functions/pets");
   const petsData = await petsPromise.json();
 
   petsData.forEach((pet) => {
     //clone the cart template
     const clone = template.content.cloneNode(true);
 
-    //filter species with dataset attribute
+    //filter species with daaset attribute
     clone.querySelector(".pet-card").dataset.species = pet.species;
 
     //fetch all pet names from JSON and inject to the cloned template
