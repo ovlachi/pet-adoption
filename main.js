@@ -55,7 +55,7 @@ function createAgeText(birthYear) {
   const age = currentYear - birthYear;
 
   if (age == 1) return "1 year old";
-  if (age == 0) return "Less than a year old";
+  if (age == 0) return "Less than 1 year old";
 
   return `${age} years old`;
 }
