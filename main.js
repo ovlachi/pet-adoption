@@ -14,12 +14,11 @@ start();
 
 //Dynamic pets fetch from external JSON file
 async function petsArea() {
-  const petsPromise = await fetch("https://learnwebcode.github.io/bootcamp-pet-data/pets.json");
+  const petsPromise = await fetch("https://ovlachi.github.io/pet-adoption/pets.json");
   const petsData = await petsPromise.json();
 
   petsData.forEach((pet) => {
     //clone the cart template
-    console.log(pet.name);
     const clone = template.content.cloneNode(true);
 
     //filter species with daaset attribute
