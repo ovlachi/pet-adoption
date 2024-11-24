@@ -1,1 +1,1 @@
-Pet adoption website with dynamic data fetch from external data source using APIs.
+Pet adoption website with dynamic data fetched from external data source using API and from external JSON file.
