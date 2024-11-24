@@ -19,6 +19,7 @@ async function petsArea() {
 
   petsData.forEach((pet) => {
     //clone the cart template
+    console.log(pet.name);
     const clone = template.content.cloneNode(true);
 
     //filter species with daaset attribute
