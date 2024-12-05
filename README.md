@@ -1,8 +1,9 @@
-This is a work in progress full-stack project for a fictional Pet adoption website. It is a dynamic data driven project with fetched content from external data source using API and external JSON file.
+This is a work in progress full-stack project for a fictional Pet adoption website code with HTML, CSS and JavaScript. 
+It is a dynamic data driven project with fetched content from external data source using API and external JSON file.
 https://ovlachi.github.io/pet-adoption/
 
-Project features:
-- User Uploaded photos managed with Cloudinary
+Project features added:
+- User uploaded photos managed with Cloudinary
 - Creating, linking and managing external data-base using MongoDB, Netlify and Node.js
 - Adding a Contact form with Express.js
 - Adding Chat functionality with React.js and Next.js
