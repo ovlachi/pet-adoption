@@ -16,6 +16,7 @@ start();
 async function petsArea() {
   const petsPromise = await fetch("https://ovlachi.github.io/pet-adoption/pets.json");
   const petsData = await petsPromise.json();
+  console.log(petsData);
 
   petsData.forEach((pet) => {
     //clone the cart template
