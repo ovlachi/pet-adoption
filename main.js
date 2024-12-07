@@ -12,17 +12,20 @@ async function start() {
 }
 start();
 
-//Dynamic pets fetch from external JSON file
+//Dynamic pets fetched from external JSON file
 async function petsArea() {
   const petsPromise = await fetch("https://ovlachi.github.io/pet-adoption/pets.json");
   const petsData = await petsPromise.json();
-  console.log(petsData);
+
+  petsData.forEach((pet) => {
+    console.log(pet.species);
+  });
 
   petsData.forEach((pet) => {
     //clone the cart template
     const clone = template.content.cloneNode(true);
 
-    //filter species with daaset attribute
+    //filter species with dataset attribute
     clone.querySelector(".pet-card").dataset.species = pet.species;
 
     //fetch all pet names from JSON and inject to the cloned template
@@ -45,7 +48,7 @@ async function petsArea() {
     wrapper.appendChild(clone);
   });
 
-  //append the wrapper to the html DOM
+  //append the wrapper to the HTML DOM
   document.querySelector(".list-of-pets").appendChild(wrapper);
 }
 
