@@ -5,6 +5,6 @@ https://ovlachi.github.io/pet-adoption/
 Project features added:
 - User uploaded photos managed with Cloudinary
 - Creating, linking and managing external data-base using MongoDB, Netlify and Node.js
-- Adding a Contact form with Express.js
-- Adding Chat functionality with React.js and Next.js
-- Deploying an hosting in Vercel.
+- Adding a Contact form with Express.js (in progress)
+- Adding Chat functionality with React.js and Next.js (in progress)
+- Deploying an hosting in Vercel. (in progress)
